@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <section th:replace="layout :: header">
+
+    </section>
+
+    <title th:text="'kontrolki' + ${light.name}">Kontrolki</title>
+</head>
+<body>
+<div class="navbar-fixed" th:replace="layout :: navigation">
+
+</div>
+<div class="search-bar container">
+    <div class="row">
+        <div class="col s12">
+            <form action="#" method="get">
+                <div class="input-field">
+                    <input name="q" type="search" placeholder="Search all lights..." required="required"
+                           autocomplete="off"/>
+                    <i class="material-icons">search</i>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="gif-detail container">
+    <div class="frame row">
+        <div class="col s12">
+            <img th:src="@{'/img/' + ${light.name} + '.jpg'}" alt="jpg"/>
+        </div>
+        <div class="col s12">
+            <h3 th:text="${light.title}"/>
+            <h4>Kolor:</h4>
+            <h5 th:text="${light.color}"/>
+            <h4>Opis:</h4>
+            <h5 th:text="${light.descryption}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 l6">
+            <div class="meta row">
+                <div class="col s3">
+                    <a th:href="@{'/autor'}">
+                        <img class="circle" th:src="@{'/jeep.jpg'}" alt="avatar"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l6">
+            <div class="share">
+                <a class="btn right" href="">Kopiuj</a>
+                <span th:text="'http://kontrolkimarti.herokuapp.com/light/' + ${light.name}">URL</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section th:replace="layout :: scripts">
+
+</section>
+</body>
+</html>
