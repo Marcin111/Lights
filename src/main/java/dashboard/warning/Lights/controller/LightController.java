@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -40,5 +41,14 @@ public class LightController {
     public String autor() {
         return "autor";
     }
+
+    @GetMapping("/search")
+    public String searchResult(@RequestParam String q, ModelMap modelMap){
+        modelMap.addAttribute("light",lightRepository.findByName(q));
+        if (lightRepository.findByName(q)==null)
+            modelMap.addAttribute("comment", "Nie ma takiej kontrolki!");
+        return "search";
+    }
+
 }
 

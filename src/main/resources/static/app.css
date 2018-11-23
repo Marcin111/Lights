@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background-color: #896bb3;
+    background-color: #3131b3;
     box-shadow: none;
 }
 
@@ -167,14 +167,14 @@ nav ul li.active, nav ul li:hover {
 }
 
 .share .btn {
-    background-color: #896bb3;
+    background-color: #3131b3;
     box-shadow: none;
     text-transform: none;
     color: #fefefe;
 }
 
 .share span {
-    color: #896bb3;
+    color: #3131b3;
     line-height: 36px;
 }
 

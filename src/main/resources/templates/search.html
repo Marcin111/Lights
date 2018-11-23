@@ -39,10 +39,16 @@
 </div>
 
 <div class="gifs container">
+    <div class="gif-detail container">
 
+        <div align="center">
+            <h5 th:if="${comment}" th:text="${comment}"></h5>
+        </div>
+
+    </div>
     <div class="row">
 
-        <div class="col s12 l4" th:each="light: ${lights}">
+        <div class="col s12 l4" th:each="lights: ${light}">
 
             <a th:href="@{'light/' + ${light.name}}">
 
