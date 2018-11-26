@@ -52,8 +52,8 @@
 
                 <span th:text="'http://kontrolki.herokuapp.com/light/' + ${light.name}">URL</span>
 
-                <div style="display:none;">
-                    <input type="text" th:value="'http://kontrolki.herokuapp.com/light/' + ${light.name}" id="myInput">
+                <div style="position: absolute; left: -999em;">
+                    <input th:value="'http://kontrolki.herokuapp.com/light/' + ${light.name}" id="myInput">
                 </div>
 
                 <a class="btn right" onclick="myCopy()">Kopiuj</a>
