@@ -54,7 +54,43 @@
 
     </div>
 </div>
+<div class="gif-detail container">
+    <div class="row">
+        <div class="col s12 l6">
+            <div class="meta row">
+                <div class="col s3">
+                    <a th:href="@{'/autor'}">
+                        <img class="circle" th:src="@{'/jeep.jpg'}" alt="avatar"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l6">
+            <div class="share">
+
+                <span th:text="'http://kontrolki.herokuapp.com/'">URL</span>
+
+                <div style="position: absolute; left: -999em;">
+                    <input th:value="'http://kontrolki.herokuapp.com/'" id="myInput">
+                </div>
+
+                <a class="btn right" onclick="myCopy()">Kopiuj</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <section th:replace="layout :: scripts"></section>
+
+<script>
+    function myCopy() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+    }
+</script>
 
 </body>
 
