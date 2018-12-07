@@ -1,1 +1,0 @@
-Technologies: #Java #Spring #Thymeleaf #Hibernate #JPA #Lombok #MySQL #DevTools #Web 
